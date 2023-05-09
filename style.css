@@ -28,6 +28,8 @@ body {
       gap: 2px;
       border: 1px solid #999;
       background-color: #e6e6e6;
+      width: 280px;
+      height: 280px;
     }
     
     /* Player board styles */
@@ -36,7 +38,7 @@ body {
     }
     
     .player-board {
-      background-image: url('ocean-background.jpg');
+      background-image: url('pexels-engin-akyurt-1435752.jpg');
       background-size: cover;
     }
     
@@ -144,9 +146,9 @@ body {
     .info-container span {
       font-weight: bold;
     }
-
+    
     /* Styles for screens less than 768px wide */
-@media (max-width: 767px) {
+    @media (max-width: 767px) {
       main {
         flex-direction: column;
         align-items: center;
@@ -168,65 +170,4 @@ body {
         align-items: center;
       }
       
-      #flip-button, #start-button {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-    }
-    
-    /* Styles for screens between 768px and 1024px wide */
-    @media (min-width: 768px) and (max-width: 1024px) {
-      main {
-        justify-content: center;
-      }
-      
-      .board-container {
-        width: 200px;
-        height: 200px;
-        margin: 10px;
-      }
-      
-      .options-section {
-        width: 250px;
-        margin-top: 0;
-      }
-    }
-
-    /* Animation for ship placement */
-.ship {
-      transition: transform 0.5s ease-out;
-    }
-    
-    /* Animation for explosions */
-    .explosion {
-      animation: explosion 1s ease-out;
-    }
-    
-    @keyframes explosion {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.5);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    /* Animation for player's turn */
-.player-turn .cell {
-      animation: player-turn 1s ease-out infinite;
-    }
-    
-    @keyframes player-turn {
-      0% {
-        background-color: #2196F3;
-      }
-      50% {
-        background-color: #4CAF50;
-      }
-      100% {
-        background-color: #2196F3;
-      }
-    }
+      #flip
