@@ -24,3 +24,5 @@ jQuery
 Acknowledgments
 [Name of tutorial or resource used to build the game]
 [Name of any libraries or frameworks used to build the game]
+
+Layout of the Game :

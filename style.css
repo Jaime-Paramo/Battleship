@@ -1,57 +1,232 @@
-.optioin container {
-      width: 500px;
-      height: 50px;
-      background-color: teal;
+/* Global styles */
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Main styles */
+    main {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    
+    /* Board container styles */
+    .board-container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      gap: 2px;
+      border: 1px solid #999;
+      background-color: #e6e6e6;
+    }
+    
+    /* Player board styles */
+    .player-section {
+      width: 280px;
+    }
+    
+    .player-board {
+      background-image: url('ocean-background.jpg');
+      background-size: cover;
+    }
+    
+    /* Computer board styles */
+    .computer-section {
+      width: 280px;
+    }
+    
+    .computer-board {
+      background-color: #e6e6e6;
+    }
+    
+    /* Option styles */
+    .options-section {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .options-container {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-}
-
-.destroyer {
-      background-color: brown;
-}
-
-.submarine {
-      background-color: green;
-}
-
-.cruiser {
-      background-color: purple;
-}
-
-.battleship {
-      background-color: orange;
-}
-
-.carrier {
-      background-color: blue;
-}
-
-.destoyer-preview {
-      width: 20px;
-      height: 10px;
-      margin: 3px;
-}
-
-.submarine-preview {
-      width: 30px;
-      height: 10px;
-      margin: 3px;
-}
-
-.cruiser-preview {
-      width: 30px;
-      height: 10px;
-      margin: 3px;
-}
-
-.battleship-preview {
-      width: 40px;
-      height: 10px;
-      margin: 3px;
-}
-
-.carrier-preview {
+      flex-wrap: wrap;
+    }
+    
+    .option {
       width: 50px;
-      height: 10px;
-      margin: 3px;
-}
+      height: 30px;
+      border: 1px solid #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .destroyer-option {
+      background-color: brown;
+    }
+    
+    .submarine-option {
+      background-color: green;
+    }
+    
+    .cruiser-option {
+      background-color: purple;
+    }
+    
+    .battleship-option {
+      background-color: orange;
+    }
+    
+    .carrier-option {
+      background-color: blue;
+    }
+    
+    /* Buttons styles */
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    
+    #flip-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    #flip-button:hover {
+      background-color: #555;
+    }
+    
+    #start-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    #start-button:hover {
+      background-color: #0062cc;
+    }
+    
+    /* Info styles */
+    .info-section {
+      width: 280px;
+    }
+    
+    .info-container {
+      background-color: #fff;
+      border: 1px solid #999;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    
+    .info-container p {
+      margin: 0;
+    }
+    
+    .info-container span {
+      font-weight: bold;
+    }
+
+    /* Styles for screens less than 768px wide */
+@media (max-width: 767px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .board-container {
+        width: 280px;
+        height: 280px;
+        margin: 10px;
+      }
+      
+      .options-section {
+        width: 100%;
+        margin-top: 10px;
+      }
+      
+      .buttons-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      #flip-button, #start-button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    
+    /* Styles for screens between 768px and 1024px wide */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      main {
+        justify-content: center;
+      }
+      
+      .board-container {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+      
+      .options-section {
+        width: 250px;
+        margin-top: 0;
+      }
+    }
+
+    /* Animation for ship placement */
+.ship {
+      transition: transform 0.5s ease-out;
+    }
+    
+    /* Animation for explosions */
+    .explosion {
+      animation: explosion 1s ease-out;
+    }
+    
+    @keyframes explosion {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Animation for player's turn */
+.player-turn .cell {
+      animation: player-turn 1s ease-out infinite;
+    }
+    
+    @keyframes player-turn {
+      0% {
+        background-color: #2196F3;
+      }
+      50% {
+        background-color: #4CAF50;
+      }
+      100% {
+        background-color: #2196F3;
+      }
+    }
