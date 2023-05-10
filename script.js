@@ -143,3 +143,9 @@ function drop(event) {
   const shipType = event.dataTransfer.getData('ship');
   event.target.dataset.ship = shipType;
 }
+
+let isHorizontal = true;
+document.getElementById('flip-button').addEventListener('click', () => {
+      isHorizontal = isHorizontal;
+      ships.forEach(ship => ship.classList.toggle('vertical'));
+});

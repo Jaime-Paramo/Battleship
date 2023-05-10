@@ -22,6 +22,8 @@ body {
     
     /* Board container styles */
     .board-container {
+      border-left: 1px dotted #000;
+      border-top: 1px dotted #000;
       display: grid;
       grid-template-columns: repeat(10, 1fr);
       grid-template-rows: repeat(10, 1fr);
@@ -30,6 +32,11 @@ body {
       background-color: #e6e6e6;
       width: 280px;
       height: 280px;
+    }
+
+    .board-container .cell {
+      border-right: 1px dotted #000;
+      border-bottom: 1px dotted #000;
     }
     
     /* Player board styles */
@@ -171,3 +178,8 @@ body {
       }
       
       #flip
+
+      .vertical {
+            /* css code to rotate ship 90 degrees */
+            transform: rotate(90deg);
+      }
