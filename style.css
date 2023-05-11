@@ -67,8 +67,8 @@
     }
     
     .option {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 50px;
       border: 1px solid #ccc;
       margin-right: 5px;
     }
@@ -90,7 +90,31 @@
       cursor: pointer;
     }
 
+    /*ship section styles*/
+    .destroyer-option {
+      background-color: brown;
+    }
     
+    .submarine-option {
+      background-color: green;
+    }
+    
+    .cruiser-option {
+      background-color: purple;
+    }
+    
+    .battleship-option {
+      background-color: orange;
+    }
+    
+    .carrier-option {
+      padding: 1opx 20px;
+      border-radius: 10px;
+      background-color: blue;
+      border-color: blue;
+      transition: 200ms transform;
+    }
+
     
     /* Info section styles */
     .info-section {
