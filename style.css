@@ -1,160 +1,101 @@
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Body styles */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #2d414b;
-      padding: 20px;
-    }
-    
-    /* Header styles */
-    header {
-      font-size: 22px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 20px;
-      border-radius: #333;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    
-    /* Main styles */
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    /* Player section styles */
-    .player-section {
-      flex-basis: 45%;
-      margin-bottom: 20px;
-    }
-    
-    .player-section h2 {
-      margin-bottom: 10px;
-    }
-    
-    /* Computer section styles */
-    .computer-section {
-      flex-basis: 45%;
-      margin-bottom: 20px;
-    }
-    
-    .computer-section h2 {
-      margin-bottom: 10px;
-    }
-    
-    /* Options section styles */
-    .options-section {
-      flex-basis: 100%;
-      margin-bottom: 20px;
-    }
-    
-    .options-section h2 {
-      margin-bottom: 10px;
-    }
-    
-    .options-container {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    
-    .option {
-      width: 30px;
-      height: 50px;
-      border: 1px solid #ccc;
-      margin-right: 5px;
-    }
-    
-    .buttons-container {
-      text-align: center;
-    }
-    
-    .buttons-container button {
-      margin-right: 10px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border-radius: #007bff;
-      border-radius: 10px;
-      font-size: 18px;
-      transition: 200ms transform;
-      font-weight: 600;
-      cursor: pointer;
-    }
+#gamesboard-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
 
-    /*ship section styles*/
-    .destroyer-option {
-      background-color: brown;
-    }
-    
-    .submarine-option {
-      background-color: green;
-    }
-    
-    .cruiser-option {
-      background-color: purple;
-    }
-    
-    .battleship-option {
-      background-color: orange;
-    }
-    
-    .carrier-option {
-      padding: 1opx 20px;
-      border-radius: 10px;
-      background-color: blue;
-      border-color: blue;
-      transition: 200ms transform;
-    }
+.game-board {
+  width : 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    
-    /* Info section styles */
-    .info-section {
-      flex-basis: 100%;
-      margin-bottom: 20px;
-    }
-    
-    .info-section h2 {
-      margin-bottom: 10px;
-    }
-    
-    .info-container p {
-      margin-bottom: 5px;
-    }
-    
-    /* Footer styles */
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 12px;
-    }
-    
-    /* Board styles */
-    .board-container {
-      display: grid;
-      grid-template-columns: repeat(10, 40px);
-      grid-template-rows: repeat(10, 40px);
-      gap: 2px;
-    }
-    
-    .cell {
-      background-color: #ddd;
-      border: 1px solid #ccc;
-    }
-    
-    /* Custom styling for specific elements */
-    #player-board {
-      background-color: #fff;
-    }
-    
-    #computer-board {
-      background-color: #eee;
-    }
+.block {
+  width: 20px;
+  height: 20px;
+}
+/* border: solid 1px black;
+box-sizing: border-box; */
+
+
+.option-container {
+  width: 500px;
+  height: 60px;
+  background-color: yellow;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.destroyer-preview  {
+  width: 20px;
+  height: 10px;
+  margin: 3px;
+}
+
+.destroyer {
+  background-color: brown;
+}
+
+.submarine-preview {
+  width: 30px;
+  height: 10px;
+  margin: 3px;
+}
+
+.submarine {
+  background-color: blue;
+}
+
+.cruiser-preview {
+  width: 30px;
+  height: 10px;
+  margin: 3px;
+}
+
+.cruiser {
+  background-color: green;
+}
+
+.battleship-preview {
+  width: 40px;
+  height: 10px;
+  margin: 3px;
+}
+
+.battleship {
+  background-color: red;
+}
+
+.carrier-preview {
+  width: 50px;
+  height: 10px;
+  margin: 3px;
+}
+
+.carrier {
+  background-color: purple;
+}
+
+/* Update the width and height for the rotated ships */
+.rotate90 .destroyer-preview {
+  width: 10px;
+  height: 20px;
+}
+
+.rotate90 .submarine-preview,
+.rotate90 .cruiser-preview {
+  width: 10px;
+  height: 30px;
+}
+
+.rotate90 .battleship-preview {
+  width: 10px;
+  height: 40px;
+}
+
+.rotate90 .carrier-preview {
+  width: 10px;
+  height: 50px;
+}
